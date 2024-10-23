@@ -34,7 +34,6 @@ jobs:
       DATA_PIPELINE_OEE_CLIENT_SECRET: ${{ secrets.DATA_PIPELINE_OEE_CLIENT_SECRET }}
       ICAPI_EXTRACTORS_CLIENT_ID: ${{ vars.ICAPI_EXTRACTORS_CLIENT_ID }}
       ICAPI_EXTRACTORS_CLIENT_SECRET: ${{ secrets.ICAPI_EXTRACTORS_CLIENT_SECRET }}
-      TOOLKIT_VERSION: '0.3.4'
 
     name: Build & Deploy
     steps:
@@ -43,7 +42,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Cognite Toolkit
-        run: pip install cognite-toolkit==${{ TOOLKIT_VERSION }}
+        run: pip install cognite-toolkit==0.3.4
       - name: Build Toolkit Configurations
         run: cdf-tk build --env=${{ matrix.environment }}
       - name: Deploy Toolkit Configurations
