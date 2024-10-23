@@ -9,7 +9,6 @@ on:
 
 env:
   PYTHON_VERSION: '3.11'
-  TOOLKIT_VERSION: '0.3.4'
 jobs:
   build-modules:
     strategy:
@@ -35,6 +34,7 @@ jobs:
       DATA_PIPELINE_OEE_CLIENT_SECRET: ${{ secrets.DATA_PIPELINE_OEE_CLIENT_SECRET }}
       ICAPI_EXTRACTORS_CLIENT_ID: ${{ vars.ICAPI_EXTRACTORS_CLIENT_ID }}
       ICAPI_EXTRACTORS_CLIENT_SECRET: ${{ secrets.ICAPI_EXTRACTORS_CLIENT_SECRET }}
+      TOOLKIT_VERSION: '0.3.4'
 
     name: Build & Deploy
     steps:
