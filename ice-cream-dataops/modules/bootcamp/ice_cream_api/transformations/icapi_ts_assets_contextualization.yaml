@@ -1,6 +1,6 @@
-externalId: 'create_asset_contextualization'
+externalId: 'icapi_ts_assets_contextualization'
 dataSetExternalId: {{icapi_ds_external_id}}
-name: 'create_asset_contextualization'
+name: 'icapi_ts_assets_contextualization'
 destination:
   type: 'timeseries'
 ignoreNullFields: true
